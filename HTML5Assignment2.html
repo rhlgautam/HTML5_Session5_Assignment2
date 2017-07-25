@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HTML5Assignment5.2</title>
+	<style type="text/css">
+		button{
+			background-color: orange;
+			color: white;
+			margin-top: 20px;
+			padding: 5px;
+			text-align: center;
+		}
+	</style>
+	<script type="text/javascript">
+		// Event Handler for Button click event which will check weather entered char is vowel or not.
+		function Compare(){
+			var strVal= document.getElementById("textStr").value;
+			if(strVal =='a'|| strVal=='e'||strVal =='i'|| strVal=='o'|| strVal =='u')
+			{
+				document.getElementById("result").innerHTML= "<b>'" + strVal + "' is a vowel.</b>";
+			}
+			else{
+				document.getElementById("result").innerHTML= "<b>'" + strVal + "' is not a vowel.</b>";
+			}
+		}
+	</script>
+</head>
+<body>
+	<h1>Welcome to Acadgild!!</h1>
+	<p>
+		This assignment will demonstrate whether the entered value is a vowel or consonant. Only one character is allowed to enter at one time. Javascript code is written within the script tag in head section.
+	</p>
+	<span><b>Enter character: </b></span>
+	<input id="textStr" minlength="1" maxlength="1" type="text">
+	<button id="btn" onclick="Compare()" >Click to Check</button>
+	<p id="result"></p>
+</body>
+</html>
